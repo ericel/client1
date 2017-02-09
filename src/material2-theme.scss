@@ -1,0 +1,42 @@
+
+@import '~@angular/material/core/theming/all-theme';
+
+
+@include md-core();
+
+$primary: md-palette($md-cyan, 700, 500, 900);
+$accent:  md-palette($md-pink, A200, A100, A400);
+
+$theme: md-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+.m2app-dark {
+  $dark-primary: md-palette($md-pink, 700, 500, 900);
+  $dark-accent:  md-palette($md-blue-grey, A200, A100, A400);
+  $dark-warn:    md-palette($md-deep-orange);
+
+  $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+  @include angular-material-theme($dark-theme);
+}
+
+.m2app-purple {
+  $purple-primary: md-palette($md-purple, 700, 500, 900);
+  $purple-accent:  md-palette($md-pink, A200, A100, A400);
+  $purple-warn:    md-palette($md-deep-orange);
+
+  $purple-theme: md-light-theme($purple-primary, $purple-accent, $purple-warn);
+
+  @include angular-material-theme($purple-theme);
+}
+
+.m2app-gray {
+  $gray-primary: md-palette($md-grey, 700, 500, 900);
+  $gray-accent:  md-palette($md-pink, A200, A100, A400);
+  $gray-warn:    md-palette($md-deep-orange);
+
+  $gray-theme: md-light-theme($gray-primary, $gray-accent, $gray-warn);
+
+  @include angular-material-theme($gray-theme);
+}
